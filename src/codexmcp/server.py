@@ -12,11 +12,11 @@ import uuid
 from pathlib import Path
 from typing import Annotated, Any, Dict, Generator, List, Literal, Optional
 
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer
 from pydantic import BeforeValidator, Field
 import shutil
 
-mcp = FastMCP("Codex MCP Server-from guda.studio")
+mcp = MCPServer("Codex MCP Server-from guda.studio")
 
 
 def _empty_str_to_none(value: str | None) -> str | None:
